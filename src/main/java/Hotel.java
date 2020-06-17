@@ -34,4 +34,8 @@ public class Hotel {
     public int roomCount() {
         return this.rooms.size();
     }
+
+    public void checkInGuest(Room room, Guest guest) {
+        room.addGuest(guest);
+    }
 }

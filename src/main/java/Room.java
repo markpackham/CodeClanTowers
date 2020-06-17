@@ -70,4 +70,5 @@ public class Room {
     public void removeGuest(Guest guest) {
         this.guests.remove(guest);
     }
+
 }

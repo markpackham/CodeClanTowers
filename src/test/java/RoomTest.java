@@ -27,6 +27,33 @@ public class RoomTest {
     }
 
     @Test
+    public void roomHasNumber(){
+        assertEquals(1, room1.getRoomNo());
+    }
+
+    @Test
+    public void roomHasCapacity(){
+        assertEquals(1000, room1.getCapacity());
+    }
+
+    @Test
+    public void roomHasType(){
+        assertEquals("conference", room1.getType());
+    }
+
+    @Test
+    public void isHasProjector(){
+        assertEquals(true, room1.isHasProjector());
+        assertEquals(false, room2.isHasProjector());
+    }
+
+    @Test
+    public void isHasBed(){
+        assertEquals(false, room1.isHasBed());
+        assertEquals(true, room2.isHasBed());
+    }
+
+    @Test
     public void canAddGuest(){
         room1.addGuest(guest1);
         assertEquals(1, room1.guestCount());

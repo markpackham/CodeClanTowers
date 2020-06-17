@@ -17,5 +17,12 @@ public class Booking {
         this.nightsBooked = nightsBooked;
     }
 
+    public void addBooking(int nightsBooked, Bedroom bedroom) {
+        this.nightsBooked = nightsBooked;
+        this.bedrooms.add(bedroom);
+    }
 
+    public int countBedrooms() {
+        return this.bedrooms.size();
+    }
 }

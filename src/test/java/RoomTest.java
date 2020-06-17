@@ -18,6 +18,8 @@ public class RoomTest {
     public void before(){
         room1 = new Room(1,1000, "conference", true, false);
         room2 = new Room(2,1, "bedroom", false, true);
+        room3 = new Room(3, 2 , "bedroom", false, true);
+        room4 = new Room(4, 10, "conference", true, false);
         guest1 = new Guest("Frank");
         guest2 = new Guest("Greg");
         guest3 = new Guest("John");

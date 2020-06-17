@@ -6,13 +6,13 @@ public class Hotel {
     private String name;
     private ArrayList<Bedroom> bedrooms;
     private ArrayList<ConferenceRoom> conferenceRooms;
-    private HashMap<Integer, String> rooms;
+    private ArrayList<Room> rooms;
 
     public Hotel(String name) {
         this.name = name;
         this.bedrooms = new ArrayList<Bedroom>();
         this.conferenceRooms = new ArrayList<ConferenceRoom>();
-        this.rooms = new HashMap<Integer, String>();
+        this.rooms = new ArrayList<Room>();
     }
 
     public String getName() {
@@ -23,19 +23,11 @@ public class Hotel {
         this.name = name;
     }
 
-    public void addBedRoom(Bedroom bedroom) {
-        this.bedrooms.add(bedroom);
+    public void addRoom(Room room) {
+        this.rooms.add(room);
     }
 
-    public int bedRoomCount() {
-        return this.bedrooms.size();
-    }
-
-    public void addConferenceRoom(ConferenceRoom conferenceRoom){
-        this.conferenceRooms.add(conferenceRoom);
-    }
-
-    public int conferenceRoomCount(){
-        return this.conferenceRooms.size();
+    public int countRooms() {
+        return this.rooms.size();
     }
 }

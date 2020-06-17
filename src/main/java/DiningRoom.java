@@ -21,4 +21,11 @@ public class DiningRoom {
         return guests;
     }
 
+    public void addGuest(Guest guest) {
+        this.guests.add(guest);
+    }
+
+    public int guestCount() {
+        return guests.size();
+    }
 }

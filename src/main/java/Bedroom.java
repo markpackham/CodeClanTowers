@@ -2,13 +2,15 @@ import java.util.ArrayList;
 
 public class Bedroom {
     private int capacity;
+    private int nightlyRate;
     private String name;
     // type eg Single or Double room
     private String type;
     private ArrayList<Guest> guests;
 
-    public Bedroom(int capacity, String name, String type) {
+    public Bedroom(int capacity, int nightlyRate, String name, String type) {
         this.capacity = capacity;
+        this.nightlyRate = nightlyRate;
         this.name = name;
         this.type = type;
         this.guests = new ArrayList<Guest>();
@@ -20,6 +22,14 @@ public class Bedroom {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public int getNightlyRate() {
+        return nightlyRate;
+    }
+
+    public void setNightlyRate(int nightlyRate) {
+        this.nightlyRate = nightlyRate;
     }
 
     public String getName() {

@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class BedroomTest {
@@ -11,8 +12,8 @@ public class BedroomTest {
 
     @Before
     public void before(){
-        bedroom1 = new Bedroom(1, "Luxury", "double");
-        bedroom2 = new Bedroom(100, "Standard", "single");
+        bedroom1 = new Bedroom(1, 1, "Luxury", "double");
+        bedroom2 = new Bedroom(100, 10, "Standard", "single");
         guest1 = new Guest("Frank");
         guest2 = new Guest("Greg");
     }
@@ -20,6 +21,11 @@ public class BedroomTest {
     @Test
     public void hasCapacity(){
         assertEquals(1, bedroom1.getCapacity());
+    }
+
+    @Test
+    public void hasNightlyRate(){
+        assertEquals(1, bedroom1.getNightlyRate());
     }
 
     @Test
@@ -42,6 +48,12 @@ public class BedroomTest {
     public void setCapacity(){
         bedroom1.setCapacity(3);
         assertEquals(3, bedroom1.getCapacity());
+    }
+
+    @Test
+    public void setNightlyRate(){
+        bedroom1.setNightlyRate(444);
+        assertEquals(444, bedroom1.getNightlyRate());
     }
 
     @Test

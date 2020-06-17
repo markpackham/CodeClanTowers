@@ -25,4 +25,12 @@ public class Booking {
     public int countBedrooms() {
         return this.bedrooms.size();
     }
+
+    public ArrayList<Bedroom> getBedrooms() {
+        return bedrooms;
+    }
+
+    public int getTotalBill(Bedroom bedroom) {
+        return this.nightsBooked * bedroom.getNightlyRate();
+    }
 }

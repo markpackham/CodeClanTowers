@@ -57,13 +57,17 @@ public class Room {
         this.hasBed = hasBed;
     }
 
+    public int guestCount() {
+        return this.guests.size();
+    }
+
     public void addGuest(Guest guest) {
         if(guestCount() < this.capacity){
             this.guests.add(guest);
         }
     }
 
-    public int guestCount() {
-        return this.guests.size();
+    public void removeGuest(Guest guest) {
+        this.guests.remove(guest);
     }
 }

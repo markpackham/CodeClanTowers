@@ -38,4 +38,11 @@ public class RoomTest {
         room2.addGuest(guest2);
         assertEquals(1, room2.guestCount());
     }
+
+    @Test
+    public void canRemoveGuest(){
+        room1.addGuest(guest1);
+        room1.removeGuest(guest1);
+        assertEquals(0, room1.guestCount());
+    }
 }

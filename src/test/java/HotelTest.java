@@ -40,9 +40,4 @@ public class HotelTest {
         assertEquals("CodeClan Towers Jupitor",hotel1.getName());
     }
 
-    @Test
-    public void canAddRoom(){
-        hotel1.addRoom(room1);
-        assertEquals(1,hotel1.countRooms());
-    }
 }

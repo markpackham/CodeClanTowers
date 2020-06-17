@@ -16,6 +16,8 @@ public class HotelTest {
     private Guest guest4;
     private Bedroom bedroom1;
     private Bedroom bedroom2;
+    private DiningRoom diningRoom1;
+    private DiningRoom diningRoom2;
 
     @Before
     public void before() {

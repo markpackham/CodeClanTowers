@@ -7,7 +7,7 @@ public class Hotel {
     private ArrayList<Bedroom> bedrooms;
     private ArrayList<ConferenceRoom> conferenceRooms;
     private ArrayList<Room> rooms;
-    private HashMap<String, Guest> dinningRooms;
+    private HashMap<String, DiningRoom> dinningRooms;
 
     public Hotel(String name) {
         this.name = name;

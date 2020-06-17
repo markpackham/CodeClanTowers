@@ -6,16 +6,18 @@ import static org.junit.Assert.assertEquals;
 public class BedroomTest {
     private Bedroom bedroom;
     private Guest guest1;
+    private Guest guest2;
 
     @Before
     public void before(){
-        bedroom = new Bedroom(2, "Luxury", "double");
+        bedroom = new Bedroom(1, "Luxury", "double");
         guest1 = new Guest("Frank");
+        guest2 = new Guest("Greg");
     }
 
     @Test
     public void hasCapacity(){
-        assertEquals(2, bedroom.getCapacity());
+        assertEquals(1, bedroom.getCapacity());
     }
 
     @Test
@@ -49,6 +51,13 @@ public class BedroomTest {
     @Test
     public void canAddGuest(){
         bedroom.addGuest(guest1);
+        assertEquals(1, bedroom.guestCount());
+    }
+
+    @Test
+    public void cannotAddGuest(){
+        bedroom.addGuest(guest1);
+        bedroom.addGuest(guest2);
         assertEquals(1, bedroom.guestCount());
     }
 }

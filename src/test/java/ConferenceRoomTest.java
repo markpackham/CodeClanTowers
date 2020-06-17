@@ -7,12 +7,15 @@ public class ConferenceRoomTest {
 
     private ConferenceRoom room1;
     private ConferenceRoom room2;
+    private Guest guest1;
+    private Guest guest2;
 
     @Before
     public void before() {
         room1 = new ConferenceRoom(1000, "1a", true);
         room2 = new ConferenceRoom(1, "2a", false);
-
+        guest1 = new Guest("Frank");
+        guest2 = new Guest("Greg");
     }
 
     @Test
@@ -47,4 +50,11 @@ public class ConferenceRoomTest {
         room1.setHasProjector(false);
         assertEquals(false, room1.isHasProjector());
     }
+
+    @Test
+    public void canAddGuest(){
+        room1.addGuest(guest1);
+        assertEquals(1, room1.guestCount());
+    }
+
 }

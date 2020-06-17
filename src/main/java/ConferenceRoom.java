@@ -1,15 +1,18 @@
 import java.util.HashMap;
+import java.util.ArrayList;
 
 public class ConferenceRoom {
 
     private int capacity;
     private String name;
     private boolean hasProjector;
+    private ArrayList<Guest> guests;
 
     public ConferenceRoom(int capacity, String name, boolean hasProjector) {
         this.capacity = capacity;
         this.name = name;
         this.hasProjector = hasProjector;
+        this.guests = new ArrayList<Guest>();
     }
 
     public int getCapacity() {
@@ -34,5 +37,15 @@ public class ConferenceRoom {
 
     public void setHasProjector(boolean hasProjector) {
         this.hasProjector = hasProjector;
+    }
+
+    public void addGuest(Guest guest) {
+        if (guestCount() < this.capacity) {
+            this.guests.add(guest);
+        }
+    }
+
+    public int guestCount() {
+        return this.guests.size();
     }
 }

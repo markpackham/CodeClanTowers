@@ -21,8 +21,8 @@ public class HotelTest {
         hotel2 = new Hotel("CodeClan Towers Glasgow");
         bedroom1 = new Bedroom(2, "Luxury", "double");
         bedroom2 = new Bedroom(100, "Standard", "single");
-        room1 = new ConferenceRoom(1000, "1a", true);
-        room2 = new ConferenceRoom(1, "2a", false);
+        room1 = new ConferenceRoom(1000, "1a", "y");
+        room2 = new ConferenceRoom(1, "2a", "n");
         guest1 = new Guest("Frank");
         guest2 = new Guest("Greg");
         guest3 = new Guest("John");

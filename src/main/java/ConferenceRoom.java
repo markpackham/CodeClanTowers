@@ -5,10 +5,10 @@ public class ConferenceRoom {
 
     private int capacity;
     private String name;
-    private boolean hasProjector;
+    private String hasProjector;
     private ArrayList<Guest> guests;
 
-    public ConferenceRoom(int capacity, String name, boolean hasProjector) {
+    public ConferenceRoom(int capacity, String name, String hasProjector) {
         this.capacity = capacity;
         this.name = name;
         this.hasProjector = hasProjector;
@@ -31,11 +31,11 @@ public class ConferenceRoom {
         this.name = name;
     }
 
-    public boolean isHasProjector() {
+    public String getHasProjector() {
         return hasProjector;
     }
 
-    public void setHasProjector(boolean hasProjector) {
+    public void setHasProjector(String hasProjector) {
         this.hasProjector = hasProjector;
     }
 

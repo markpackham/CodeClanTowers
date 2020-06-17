@@ -1,6 +1,9 @@
+import java.util.HashMap;
+
 public class Hotel {
 
     private String name;
+    //private HashMap<> rooms;
 
     public Hotel(String name) {
         this.name = name;

@@ -12,8 +12,8 @@ public class ConferenceRoomTest {
 
     @Before
     public void before() {
-        room1 = new ConferenceRoom(1000, "1a", true);
-        room2 = new ConferenceRoom(1, "2a", false);
+        room1 = new ConferenceRoom(1000, "1a", "y");
+        room2 = new ConferenceRoom(1, "2a", "n");
         guest1 = new Guest("Frank");
         guest2 = new Guest("Greg");
     }
@@ -42,13 +42,13 @@ public class ConferenceRoomTest {
 
     @Test
     public void hasProjector(){
-        assertEquals(true, room1.isHasProjector());
+        assertEquals("y", room1.getHasProjector());
     }
 
     @Test
     public void canSetProjector(){
-        room1.setHasProjector(false);
-        assertEquals(false, room1.isHasProjector());
+        room1.setHasProjector("n");
+        assertEquals("n", room1.getHasProjector());
     }
 
     @Test

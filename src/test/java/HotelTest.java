@@ -33,6 +33,8 @@ public class HotelTest {
         guest4 = new Guest("Tim");
         bedroom1 = new Bedroom(1, 1, "Luxury", "double");
         bedroom2 = new Bedroom(100, 10, "Standard", "single");
+        diningRoom1 = new DiningRoom("Subway");
+        diningRoom1 = new DiningRoom("Macdonalds");
     }
 
     @Test
@@ -74,6 +76,12 @@ public class HotelTest {
         hotel1.checkOutGuest(room1, guest1);
         assertEquals(1, hotel1.roomCount());
         assertEquals(1, room1.guestCount());
+    }
+
+    @Test
+    public void getADinningRoom(){
+        hotel1.addDinningRoom("Subway",diningRoom1);
+        assertEquals(1, hotel1.diningRoomCount());
     }
 }
 

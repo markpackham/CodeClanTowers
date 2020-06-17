@@ -38,4 +38,10 @@ public class Hotel {
     public void checkInGuest(Room room, Guest guest) {
         room.addGuest(guest);
     }
+
+    public void checkOutGuest(Room room, Guest guest) {
+            if(this.rooms.contains(room)){
+                room.removeGuest(guest);
+            }
+    }
 }
